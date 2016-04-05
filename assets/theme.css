@@ -1,0 +1,71 @@
+body{
+	background-image: url('devfapp.jpg');
+	background-attachment: fixed;
+}
+nav{
+	background: #212121;
+}
+menu{
+	padding: 0px;
+	margin: 0px;
+}
+a:hover{
+	cursor: pointer;
+}
+nav #reg:hover{
+	text-decoration: underline;
+}
+.card-title{
+	color: black !important;
+}
+.btn-enviar{
+	background-color: black;
+	margin-bottom: 3%;
+}
+.btn-registro{
+	background: black;
+	margin-left: 40%;
+	display: none;
+}
+.caja{
+	margin-top: 15vh;
+	width: 60%;
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px grey;
+	background:rgba(255, 255, 255, 1);
+}
+.caja h3{
+	text-align: center;
+}
+nav .brand-logo{
+	margin-top: 0.6%;
+	margin-left: 1%;
+}
+.login-field{
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+input[type=text]:focus:not([readonly]){
+	border-bottom: 1px solid #9E9E9E;
+	box-shadow: 0 1px 0 0 #9E9E9E;
+}
+input[type=text]:focus:not([readonly])+label{
+	color: #9E9E9E;
+}
+.btn-login{
+	background: #212121;
+	margin: 10% 25% 5%;
+}
+.deactivated{
+	display:none;
+}
+
+@media only screen and (max-width: 992px){
+	nav .brand-logo {
+    	margin-top: 1%;
+	}
+	.btn-registro{
+		display: inline-block;
+	}
+}

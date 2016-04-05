@@ -1,0 +1,92 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#/profile" class="brand-logo center"><img src="http://devf.mx/assets/devf-logo.png" alt="dev.f"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a id="reg" >Registrate</a></li>
+      </ul>
+    </div>
+</nav>
+      
+<div class="row caja valign-wrapper " id="login">
+  <form class="col s12" action="">
+
+    <h3 class="titulo">Inicia Sesión</h3>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <button class="btn waves-effect waves-light btn-enviar" type="submit" name="action">login!
+        <i class="material-icons right">send</i>
+      </button>
+
+  </form>
+</div>
+
+<a class="waves-effect waves-light btn btn-registro" id="reg2" >Registrarse</a>
+
+<div class="row caja valign-wrapper deactivated" id="registro">
+  <form class="col s12" action="">
+
+    <h3 class="titulo">Inicia Sesión</h3>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+
+      <button class="btn waves-effect waves-light btn-enviar" type="submit" name="action">Singup!
+        <i class="material-icons right">send</i>
+      </button>
+
+  </form>
+</div>
+
+
+<script>
+  $('#reg').on('click',function() {
+        
+    $('#login').addClass('deactivated');
+    $('.titulo').html("Registrate");
+    $('#caja').animate({'top':'0','opacity':'0'},'fast');
+    $('#registro').removeClass('deactivated');
+});
+
+$('#reg2').on('click',function() {
+        
+    $('#login').addClass('deactivated');
+    $('.titulo').html("Registrate");
+    $('#caja').animate({'top':'0','opacity':'0'},'fast');
+    $('#registro').removeClass('deactivated');
+    $('#reg2').addClass('deactivated')
+});
+
+
+</script>
