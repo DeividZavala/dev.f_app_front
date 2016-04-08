@@ -8,25 +8,25 @@
 </nav>
       
 <div class="row caja valign-wrapper " id="login">
-  <form class="col s12" action="">
+  <form class="col s12" ng-submit="home.login()">
 
     <h3 class="titulo">Inicia Sesión</h3>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
+          <input id="Username" type="text" class="validate" ng-model="home.data.username">
+          <label for="Username">Username</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" ng-model="home.data.password">
           <label for="password">Password</label>
         </div>
       </div>
-
-      <button class="btn waves-effect waves-light btn-enviar" type="submit" name="action">login!
+      <button class="btn waves-effect waves-light btn-enviar" type="submit" name="action">
+        do login!
         <i class="material-icons right">send</i>
       </button>
 
@@ -39,6 +39,13 @@
   <form class="col s12" action="">
 
     <h3 class="titulo">Inicia Sesión</h3>
+
+      <div class = "row">
+        <div class="input-field col s12">
+          <input id="username" type="text" class="validate">
+          <label for="username">Username</label>
+        </div>
+      </div>
 
       <div class="row">
         <div class="input-field col s6">

@@ -7,6 +7,7 @@
 
 
     function configuration($routeProvider){
+
     $routeProvider
       .when('/',
         { 
@@ -20,11 +21,17 @@
         })
       .when('/calendar',
         { 
-          template : "<menu></menu><calendar></calendar>", 
+          template : "<menu></menu><newevent></newevent><calendar></calendar>", 
+          resolve : {
+            events : getEvents
+          }
         })
-      .when('/jobs',
+      .when('/files',
         { 
-          template : "<menu></menu><jobs></jobs>", 
+          template : "<menu></menu><newfile></newfile><file></file>", 
+          resolve : {
+            files : getFiles
+          }
         })
       .when('/senseis',
         { 
@@ -38,26 +45,19 @@
         redirectTo : '/' 
       });
   }
-  
-})();
 
+  // getUser_token.$inject = ["loginApi"];
+  // function getUser_token(loginApi){
+  //   return loginApi.query();
+  // }
 
-
-var Module = (function(){
-  var privateProperty = 'foo';
-  function privateMethod(args){
-    console.log(privateProperty,args);
+  getFiles.$inject = ["fileApi"]
+  function getFiles(fileApi){
+    return fileApi.query();
   }
-
-  return {
-    publicProperty:'Public',
-
-    PublicMethod: function (args){
-      console.log(this.publicProperty);
-    },
-
-    privilegedMethod: function(args){
-      return privateMethod(args);
-    }
+  
+  getEvents.$inject = ["eventApi"]
+  function getEvents(eventApi){
+    return eventApi.query();
   }
 })();

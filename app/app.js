@@ -4,8 +4,11 @@
 	angular
 		.module('devfapp',['ngRoute','ngResource']);
 
-	$(".button-collapse").sideNav();
-	$('.modal-trigger').leanModal();
 
+	$(document).ready(function(){
+		$(".button-collapse").sideNav();
+		$('.modal-trigger').leanModal();
+		$('.collapsible').collapsible();
+	});
 
 })();

@@ -9,6 +9,20 @@ menu{
 	padding: 0px;
 	margin: 0px;
 }
+.collapsible-header span{
+	padding-left: 20%;
+}
+.btn-newent{
+	margin: 5%;
+	width: 20%;
+	background-color: black;
+}
+.collection .collection-item.avatar .secondary-content {
+    top: 32px;
+}
+.collapsible-body{
+	background-color: white;
+}
 a:hover{
 	cursor: pointer;
 }

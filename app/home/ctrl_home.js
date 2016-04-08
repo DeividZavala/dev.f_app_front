@@ -1,10 +1,27 @@
 (function(){
 	'use strict'
 
-	angular.module('devfapp')
+	angular
+		.module('devfapp')
 		.controller('homeCtrl',homeCtrl);
 
-	function homeCtrl(){
-		var devf = this;
+
+	homeCtrl.$inject = ['loginService']
+
+	function homeCtrl(loginService){
+		var home = this;
+		home.login = login;
+
+		function login(){
+			loginService.doLogin(home.data);
+		}
+		// this.userlog = loginService;
+		// this.login = login;
+
+		// function login(){
+		// 	console.log('c');
+		// }
 	};
+
+
 })();
